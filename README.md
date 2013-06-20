@@ -25,6 +25,7 @@ Status
 ======
 
 Right now, the producer accomdates the requests to multiple queues. But, the consumer consumes from only a single queue.
+Works perfectly fine for a single queue.
 
 
 On the way
