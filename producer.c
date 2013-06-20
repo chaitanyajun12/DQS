@@ -89,6 +89,7 @@ void bind_fd_to_serv_add(int sockfd)
 }
 
 
+// Listens for new requests and forwards them to the proper queues.
 void listen_for_requests(int sockfd)
 {
 	int pid, n, newsockfd;
@@ -97,16 +98,16 @@ void listen_for_requests(int sockfd)
 	struct sockaddr cli_addr;
 	int clilen;
 
-
 	while(1) {
+
     	clilen = sizeof(cli_addr);
 	printf("waiting ..\n");
 	newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, &clilen);
 	if (newsockfd < 0)
 		perror("ERROR on accepting connection");
 
-	while(1) {
-
+	while(1) 
+	{
 		Request req;
 		n = recvfrom(newsockfd, &req, sizeof(Request), 0, (struct sockaddr *)&cli_addr, &clilen);
 		if (n <= 0)
@@ -116,7 +117,8 @@ void listen_for_requests(int sockfd)
 		}
 	
 		printf("Recv: data: %d, delay: %d\n", req.data, req.delay);
-	    	check_for_queue_n_insert(&req);
+	 
+	   	check_for_queue_n_insert(&req);
 	}
 
 		sleep(5);

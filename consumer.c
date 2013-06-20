@@ -1,6 +1,8 @@
 #include "consumer.h"
 
+/* Right now consumes only from a single queue. Still changes will be there in this file. */ 
 
+/*   Setting a queue readable event */
 void set_queue_event(Q_TYPE * q)
 {
 	printf("Set queue readable event for queue delay: %d\n", q -> delay);
@@ -19,6 +21,8 @@ void set_queue_event(Q_TYPE * q)
 
 	ev_run (loop, 0);
 }
+
+// Setting a timeout event
 
 void set_timeout_event(Q_TYPE * q)
 {

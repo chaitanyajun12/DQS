@@ -5,8 +5,13 @@
 
 #define PORT 5000
 
+// Address of all the queues
 extern Q_TYPE * queues[10];
+
+// Total queues
 extern unsigned int totQueues;
+
+// Queues which have initialized
 extern unsigned int init_queues;
 
 #endif

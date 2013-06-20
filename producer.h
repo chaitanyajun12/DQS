@@ -11,7 +11,6 @@
 #include <sys/types.h>
 #include <time.h>
 #include <netdb.h>
-//#include <arpa/inet.h>
 #include <netinet/in.h>
 
 #include "qtype.h"

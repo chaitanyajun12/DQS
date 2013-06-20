@@ -4,6 +4,8 @@
 #include <time.h>
 #include <ev.h>
 
+// Queue descriptor
+
 typedef struct q_type
 {
 	int delay;

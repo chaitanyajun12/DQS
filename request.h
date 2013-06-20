@@ -2,6 +2,8 @@
 #define REQUEST_H_
 
 #pragma pack(1)
+
+// Request descriptor
 typedef struct req
 {
     int delay;
