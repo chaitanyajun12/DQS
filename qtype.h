@@ -14,7 +14,7 @@ typedef struct q_type
 	time_t last_access;
 	int init;
 
-	ev_io queue_watcher;
+	struct ev_loop * loop;
 	ev_timer timer_watcher;	
 
 } Q_TYPE;

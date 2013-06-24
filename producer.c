@@ -11,7 +11,10 @@ void insert_into_queue(Q_TYPE * q, Request * req)
 		exit(2);
         }
 
+	pthread_mutex_lock(&lock);
 	(q -> length) = (q -> length) + 1;
+	pthread_mutex_unlock(&lock);
+
 	
 	printf("Inserted into the queue with data and delay: %d .. %d .. Length: %d\n", req -> data, req -> delay, q -> length);	
 }
@@ -37,6 +40,7 @@ void create_queue(Request * req)
 	queues[totQueues-1] = new_q;
 
 	insert_into_queue(new_q, req);
+
 }
 
 void check_for_queue_n_insert(Request * req)

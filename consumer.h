@@ -32,7 +32,7 @@ void set_timeout_event(Q_TYPE * q);
 void read_from_queue(Q_TYPE * q);
 static void queue_cb (EV_P_ ev_io *w, int revents);
 static void timeout_cb (EV_P_ ev_timer *w, int revents);
-int init();
+void init();
 void * consumer();
 
 #endif

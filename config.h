@@ -14,4 +14,7 @@ extern unsigned int totQueues;
 // Queues which have initialized
 extern unsigned int init_queues;
 
+// mutex locking on queue length
+extern pthread_mutex_t lock;
+
 #endif
