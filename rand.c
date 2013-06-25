@@ -70,8 +70,7 @@ int main()
     while(1)
     {
         delay = rand() % MAX_QUEUE_DELAY + 1;
-        //printf("%d\n", delay);
-
+        
         data = data + 1;
 
         Request req;
