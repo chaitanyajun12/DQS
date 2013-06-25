@@ -58,6 +58,7 @@ void write_to_socket(const Request * data)
     printf("SUCCESS: data: %d, delay: %d\n", data -> data, data -> delay);
 }
 
+// Randomly generate requests and write them into a socket
 int main()
 {
     int delay;
@@ -70,7 +71,6 @@ int main()
     while(1)
     {
         delay = rand() % MAX_QUEUE_DELAY + 1;
-        
         data = data + 1;
 
         Request req;
