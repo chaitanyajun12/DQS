@@ -44,6 +44,7 @@ void read_from_queue(Q_TYPE * q)
 	}
 }
 
+// Timeout callback
 static void timeout_cb (EV_P_ ev_timer *w, int revents)
 {
 	puts ("timeout");
@@ -55,6 +56,9 @@ static void timeout_cb (EV_P_ ev_timer *w, int revents)
 	read_from_queue(q);	
 }
 
+/* Spawn a thread for each of the queues with its own event loop. The timeout repeats itself for
+   delay number of seconds.
+*/
 void init()
 {
 	int i;
