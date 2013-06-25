@@ -10,7 +10,7 @@ DQS has got a producer, multiple queues and a consumer.
 3. Consumer accesses requests from these queues. If it consumes a request, its got to wait till delay seconds expire. Then only it is supposed the access the same queue again.
 
 Install
-~~~~~~~
+=======
 
 1. Open a terminal run,
 
@@ -21,12 +21,12 @@ Install
         sh rand_req_gen.sh  -  Generates requests randomly and writes them to a queue
         
 Update
-~~~~~~
+======
 
 The consumption of requests for multiple queues is done! :)
 
 On the way
-~~~~~~~~~~
+==========
 
 1. Optimizing DQS.
 2. Proper Makefiles.
