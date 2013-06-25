@@ -16,8 +16,8 @@
 #define MAX_QUEUE_DELAY 4
 
 int sockfd;
-
 struct sockaddr_in serv_addr;
+
 void connect_to_serv_add()
 {
     int portno, n, optval = 1;
@@ -43,7 +43,7 @@ void connect_to_serv_add()
 
     if (connect(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0)
         perror("ERROR connecting");
-
+        
 }
 
 void write_to_socket(const Request * data)
